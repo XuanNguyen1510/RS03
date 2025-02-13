@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Comic Sans MS, sans-serif;
+            background-color: #ffcccb;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;  /* Centers horizontally */
+            align-items: center;  /* Centers vertically */
+            gap: 20px;  /* Space between buttons */
+            margin-top: 20px;
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .no {
+            background-color: #f44336;
+            color: white;
+            position: relative;
+        }
+        .valentine-png {
+            width: 200px;
+            height: 200px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <img src="valentine_image.png" alt="Heart Image" class="valentine-png">
+        <h1>Rohanieeee 💖💖💖,</h1>
+        <h1>Will You Be My Valentine Foreverrrrr? </h1>
+       <div class="button-container">
+           <a href="yes.html">
+                <button class="btn yes" onclick="window.location.href='/yes'">Yes</button>
+            </a>
+                <button class="btn no" id="no-btn" onmouseover="changeNoText()">No</button>
+            </div>
+        <script>
+            const excuses = [
+                "Are you sure???? 🥺",
+                "Puinnnnnnn 😭",
+                "Loading ... ⏳",
+                "No button is not available at the moment 😝",
+                "Try again tomorrow 😆",
+                "404 Answer Not Found 😂",
+            ];
+
+
+            function changeNoText() {
+                let noButton = document.getElementById("no-btn");
+                let randomIndex = Math.floor(Math.random() * excuses.length);
+                noButton.innerText = excuses[randomIndex];
+            }
+        </script>
+
+
+    </div>
+</body>
+</html>
